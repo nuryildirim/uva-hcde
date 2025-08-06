@@ -1,10 +1,111 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>People - UVA Human-Centered Design & Engineering</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        } */
+
+        .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+        
+        .person-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .person-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+            background: #ddd;
+        }
+        
+        .person-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #232d4b;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .person-title {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.8rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .person-departments {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+        
+        .person-research {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+        
+        .person-website {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .person-website a {
+            color: #e57200;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .person-website a:hover {
+            color: #232d4b;
+            text-decoration: underline;
+        }
+        
+        .section-intro {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .people-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,7 +141,207 @@
             </div>
             <div class="section-content">
                 <h1>People</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="section-intro">
+                    Our interdisciplinary group brings together faculty from across the University of Virginia who are advancing the field of human-centered design and engineering. Our members conduct cutting-edge research in areas ranging from human-computer interaction and machine learning to healthcare informatics and assistive technologies.
+                </p>
+                
+                <div class="people-grid">
+                    <!-- Homa Alemzadeh -->
+                    <div class="person-card">
+                        <img src="assets/people/homa_alemzadeh.jpg" alt="Homa Alemzadeh" class="person-image">
+                        <h2 class="person-name">Homa Alemzadeh</h2>
+                        <p class="person-title">Associate Professor</p>
+                        <p class="person-departments">Electrical & Computer Engineering; Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Medical Cyber-Physical Systems; AI-enabled systems; surgical robots and semi-autonomous vehicles</p>
+                        <div class="person-website">
+                            <a href="https://homa-alem.github.io/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Panagiotis Apostolellis -->
+                    <div class="person-card">
+                    <img src="assets/people/panagiotis_apostolellis.jpg" alt="Panagiotis Apostolellis" class="person-image">
+                    <h2 class="person-name">Panagiotis Apostolellis</h2>
+                    <p class="person-title">Associate Professor</p>
+                    <p class="person-departments">Computer Science</p>
+                    <p class="person-research"><strong>Research Areas:</strong> Human‑Computer Interaction (HCI); audience interaction; informal learning with technology; serious games; 3D user interfaces</p>
+                    <div class="person-website">
+                        <a href="http://papostolellis.com/" target="_blank">Visit Website →</a>
+                    </div>
+                    </div>
+
+
+                    <!-- Reid Bailey -->
+                    <div class="person-card">
+                        <img src="assets/people/reid_bailey.webp" alt="Reid Bailey" class="person-image">
+                        <h2 class="person-name">Reid Bailey</h2>
+                        <p class="person-title">Professor</p>
+                        <p class="person-departments">Systems & Information Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Human-centered design; design thinking; engineering education; systems thinking and modeling; interdisciplinary innovation</p>
+                        <div class="person-website">
+                            <a href="https://rrbailey9.wixsite.com/reid-bailey" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Laura Barnes -->
+                    <div class="person-card">
+                        <img src="assets/people/laura_barnes.jpg" alt="Laura Barnes" class="person-image">
+                        <h2 class="person-name">Laura Barnes</h2>
+                        <p class="person-title">Professor</p>
+                        <p class="person-departments">Systems & Information Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Data science; machine learning; HCI; computational social science; digital health</p>
+                        <div class="person-website">
+                            <a href="https://s2helab.com/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Matthew Bolton -->
+                    <div class="person-card">
+                        <img src="assets/people/matt_bolton.webp" alt="Matthew Bolton" class="person-image">
+                        <h2 class="person-name">Matthew Bolton</h2>
+                        <p class="person-title">Associate Professor</p>
+                        <p class="person-departments">Systems & Information Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Formal methods; verification and validation; human factors engineering; human–automation interaction; medical devices</p>
+                        <div class="person-website">
+                            <a href="https://drbolton.org/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Donna Chen -->
+                    <div class="person-card">
+                    <img src="assets/people/donna_chen.webp" alt="Donna Chen" class="person-image">
+                    <h2 class="person-name">T. Donna Chen</h2>
+                    <p class="person-title">Associate Professor</p>
+                    <p class="person-departments">Civil &amp; Environmental Engineering</p>
+                    <p class="person-research"><strong>Research Areas:</strong> Sustainable transportation systems; travel demand modeling; transportation economics; crash safety</p>
+                    <div class="person-website">
+                        <a href="https://engineering.virginia.edu/faculty/t-donna-chen" target="_blank">Visit Profile →</a>
+                    </div>
+                    </div>
+
+
+                    <!-- Afsaneh Doryab -->
+                    <div class="person-card">
+                        <img src="assets/people/afsaneh_doryab.jpeg" alt="Afsaneh Doryab" class="person-image">
+                        <h2 class="person-name">Afsaneh Doryab</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">Systems & Information Engineering; Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Computational modeling of human behavior from mobile/wearable sensors; HCI; machine learning; health informatics</p>
+                        <div class="person-website">
+                            <a href="https://www.afsanehdoryab.com" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Lu Feng -->
+                    <div class="person-card">
+                        <img src="assets/people/lu_feng.jpg" alt="Lu Feng" class="person-image">
+                        <h2 class="person-name">Lu Feng</h2>
+                        <p class="person-title">Associate Professor</p>
+                        <p class="person-departments">Computer Science; Systems & Information Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> AI safety; autonomous systems; Cyber-Physical Systems; formal methods; human–machine teaming</p>
+                        <div class="person-website">
+                            <a href="https://www.cs.virginia.edu/~lufeng" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Greg Gerling -->
+                    <div class="person-card">
+                        <img src="assets/people/gregory_gerling.jpg" alt="Greg Gerling" class="person-image">
+                        <h2 class="person-name">Greg Gerling</h2>
+                        <p class="person-title">Professor</p>
+                        <p class="person-departments">Systems & Information Engineering; Mechanical & Aerospace Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Haptics; computational neuroscience; biomechanics; human–machine interaction; human factors</p>
+                        <div class="person-website">
+                            <a href="https://www.gerlingtouchlab.com" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Seongkook Heo -->
+                    <div class="person-card">
+                        <img src="assets/people/seongkook_heo.jpg" alt="Seongkook Heo" class="person-image">
+                        <h2 class="person-name">Seongkook Heo</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Human‑Computer Interaction; interaction techniques; novel sensing; haptics</p>
+                        <div class="person-website">
+                            <a href="https://ultimateinterface.com/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Tariq Iqbal -->
+                    <div class="person-card">
+                        <img src="assets/people/tariq_iqbal.jpeg" alt="Tariq Iqbal" class="person-image">
+                        <h2 class="person-name">Tariq Iqbal</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">Systems & Information Engineering; Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Human-robot collaboration; multi-agent coordination; assistive robotics; collaborative learning</p>
+                        <div class="person-website">
+                            <a href="https://www.tiqbal.com/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Yen-Ling Kuo -->
+                    <div class="person-card">
+                        <img src="assets/people/yen-ling_kuo.webp" alt="Yen-Ling Kuo" class="person-image">
+                        <h2 class="person-name">Yen‑Ling Kuo</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Human-AI interaction; interactive machine learning; natural language processing; computational social science</p>
+                        <div class="person-website">
+                            <a href="https://yenlingkuo.com" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Sarah (Ye) Sun -->
+                    <div class="person-card">
+                        <img src="assets/people/sarah_sun.webp" alt="Sarah (Ye) Sun" class="person-image">
+                        <h2 class="person-name">Sarah (Ye) Sun</h2>
+                        <p class="person-title">Associate Professor</p>
+                        <p class="person-departments">Mechanical & Aerospace Engineering</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Wearable robotics; assistive devices; human motion biomechanics; design optimization</p>
+                        <div class="person-website">
+                            <a href="https://engineering.virginia.edu/labs-groups/wearlab" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Rupa Valdez -->
+                    <div class="person-card">
+                    <img src="assets/people/rupa_valdez.webp" alt="Rupa Valdez" class="person-image">
+                    <h2 class="person-name">Rupa Valdez</h2>
+                    <p class="person-title">Professor</p>
+                    <p class="person-departments">Systems &amp; Information Engineering; Public Health Sciences</p>
+                    <p class="person-research"><strong>Research Areas:</strong> Health informatics; human factors engineering; community-engaged health equity; underserved populations</p>
+                    <div class="person-website">
+                        <a href="https://engineering.virginia.edu/faculty/rupa-s-valdez" target="_blank">Visit Profile →</a>
+                    </div>
+                    </div>
+
+
+                    <!-- Amanda Watson -->
+                    <div class="person-card">
+                        <img src="assets/people/amanda_watson.webp" alt="Amanda Watson" class="person-image">
+                        <h2 class="person-name">Amanda Watson</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">Electrical and Computer Engineering; Computer Science</p>
+                        <p class="person-research"><strong>Research Areas:</strong> Human‑AI interaction; emotion AI; mental health technologies; child development</p>
+                        <div class="person-website">
+                            <a href="https://watsonresearchlab.org/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+
+                    <!-- Nur Yildirim -->
+                    <div class="person-card">
+                        <img src="assets/people/nur_yildirim.jpg" alt="Nur Yildirim" class="person-image">
+                        <h2 class="person-name">Nur Yildirim</h2>
+                        <p class="person-title">Assistant Professor</p>
+                        <p class="person-departments">School of Data Science
+                        <p class="person-research"><strong>Research Areas:</strong> Human‑AI interaction; participatory and human‑centered approaches in AI lifecycle design; AI innovation in health and public services</p>
+                        <div class="person-website">
+                            <a href="https://nuryildirim.github.io/" target="_blank">Visit Website →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

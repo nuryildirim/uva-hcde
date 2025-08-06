@@ -1,10 +1,183 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Courses - UVA Human-Centered Design & Engineering</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .courses-intro {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .course-section {
+            margin-bottom: 3rem;
+        }
+        
+        .course-section h2 {
+            color: #232d4b;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e57200;
+            display: inline-block;
+        }
+        
+        .courses-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .course-card {
+            background: #f9f9f9;
+            border-left: 4px solid #e57200;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        
+        .course-header {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+            gap: 0.75rem;
+        }
+        
+        .course-code {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #232d4b;
+            background: #e5720015;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .course-title {
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #232d4b;
+        }
+        
+        .course-instructor {
+            font-style: italic;
+            color: #666;
+            font-size: 1rem;
+            margin-left: auto;
+        }
+        
+        .course-description {
+            color: #555;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+        
+        .course-level-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: #232d4b;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+                
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #232d4b 0%, #3a4b6b 100%);
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e57200;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-tag {
+            padding: 0.5rem 1rem;
+            background: #fff;
+            border: 2px solid #e57200;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            color: #232d4b;
+        }
+        
+        .filter-tag:hover {
+            background: #e57200;
+            color: white;
+        }
+        
+        .filter-tag.active {
+            background: #e57200;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .course-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .course-instructor {
+                margin-left: 0;
+            }
+            
+            .course-level-badge {
+                position: static;
+                display: inline-block;
+                margin-top: 0.5rem;
+            }
+            
+            .stats-container {
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,7 +213,161 @@
             </div>
             <div class="section-content">
                 <h1>Courses</h1>
-                <p>Below is a non-exhaustive list of courses offered on human-computer interaction, interaction design, and other related topics across various departments and units on campus. More detail and up-to-date information on courses can be found on department websites.</p>
+                <p class="courses-intro">
+                    Our courses span multiple departments and offer hands-on experience in HCI, user experience design, human factors, AI for social good, and interactive technologies. 
+                </p>
+
+
+                <!-- Undergraduate Courses -->
+                <div class="course-section">
+                    <h2>Undergraduate Courses</h2>
+                    
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 3205</span>
+                                <span class="course-title">HCI for Software Development</span>
+                                <span class="course-instructor">Panagiotis Apostolellis</span>
+                            </div>
+                            <p class="course-description">
+                                Introduction to user interface and user experience design. Learn fundamental principles of human-computer interaction and apply them to create intuitive software interfaces.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 4501</span>
+                                <span class="course-title">Usability Engineering</span>
+                                <span class="course-instructor">Panagiotis Apostolellis</span>
+                            </div>
+                            <p class="course-description">
+                                Principles and methods for evaluating and improving usability in software systems. Master user testing, heuristic evaluation, and iterative design processes.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            
+                            <div class="course-header">
+                                <span class="course-code">CS 4501/6501</span>
+                                <span class="course-title">Engineering Interactive Technologies</span>
+                                <span class="course-instructor">Seongkook Heo</span>
+                            </div>
+                            <p class="course-description">
+                                Hands-on course on building interactive systems using sensors, actuators, and microcontrollers. Create tangible interfaces and explore emerging interaction paradigms.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">SYS 3023</span>
+                                <span class="course-title">Human Machine Interface</span>
+                                <span class="course-instructor">Greg Gerling</span>
+                            </div>
+                            <p class="course-description">
+                                Introduction to design and evaluation of human-centered systems with usability and cognitive principles. Focus on understanding human capabilities and limitations in system design.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            
+                            <div class="course-header">
+                                <span class="course-code">SYS 4024/6024</span>
+                                <span class="course-title">User Experience Design</span>
+                                <span class="course-instructor">Greg Gerling</span>
+                            </div>
+                            <p class="course-description">
+                                Case-based UI design course with client-driven projects on various platforms. Work with real clients to solve authentic UX challenges across web, mobile, and emerging platforms.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            
+                            <div class="course-header">
+                                <span class="course-code">SYS 4591/6581</span>
+                                <span class="course-title">Special Topics: Human Factors in Safety</span>
+                                <span class="course-instructor">Matthew Bolton</span>
+                            </div>
+                            <p class="course-description">
+                                Exploration of human factors principles in ensuring safety in complex systems. Analyze accidents, design safety-critical interfaces, and apply formal verification methods.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            
+                            <div class="course-header">
+                                <span class="course-code">SYS 4591/6581</span>
+                                <span class="course-title">Special Topics: Human Error in Complex Systems</span>
+                                <span class="course-instructor">Sara Riggs</span>
+                            </div>
+                            <p class="course-description">
+                                Investigates causes and prevention of human error in sociotechnical environments. Study cognitive psychology, system design, and organizational factors affecting human performance.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            
+                            <div class="course-header">
+                                <span class="course-code">SYS 4581/6581</span>
+                                <span class="course-title">AI for Social Good</span>
+                                <span class="course-instructor">Afsaneh Doryab</span>
+                            </div>
+                            <p class="course-description">
+                                Challenges students to develop AI-based solutions addressing social, health, and sustainability goals. Combine machine learning with human-centered design for positive social impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graduate Courses -->
+                <div class="course-section">
+                    <h2>Graduate Courses</h2>
+                    
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 6205</span>
+                                <span class="course-title">Research Methods in Human-Computer Interaction</span>
+                                <span class="course-instructor">Seongkook Heo</span>
+                            </div>
+                            <p class="course-description">
+                                Covers HCI research methods and includes a hands-on research project. Master qualitative and quantitative methods, experimental design, and statistical analysis for HCI research.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 6501</span>
+                                <span class="course-title">Learning for Interactive Robots</span>
+                                <span class="course-instructor">Yen-Ling Kuo</span>
+                            </div>
+                            <p class="course-description">
+                                ML methods for enabling robots to interact with humans through language and reasoning. Explore reinforcement learning, natural language processing, and human-robot collaboration.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 6501</span>
+                                <span class="course-title">Computational Behavior Modeling</span>
+                                <span class="course-instructor">Afsaneh Doryab</span>
+                            </div>
+                            <p class="course-description">
+                                Seminar-style course exploring computational models of human and system behavior. Engage with cutting-edge research through readings, presentations, and an original research project.
+                            </p>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">SYS 6007</span>
+                                <span class="course-title">Human Factors I</span>
+                                <span class="course-instructor">Matthew Bolton</span>
+                            </div>
+                            <p class="course-description">
+                                Fundamental topics in human factors engineering and human-system interaction. Deep dive into cognitive engineering, workload assessment, and human performance modeling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
